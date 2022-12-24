@@ -76,7 +76,6 @@ export default function Handlebutton(submit, params) {
   return {
     handleChange,
     handleSubmit,
-    // rentClick,
     logout,
     values,
     errors,
