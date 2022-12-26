@@ -1,0 +1,155 @@
+.Reset {
+    background-color: rgb(231, 231, 255);
+    width: 100%;
+    height: 65rem;
+    margin-top: -12rem;
+}
+.cont {
+    background-color: azure;
+}
+.reset-form{
+    margin-top: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    width: 35%;
+    height: 53%;
+    padding: 3rem;
+    margin-left: 8%;
+    background-color: #fff;
+    box-shadow: 2px 2px 35px 2px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    /* margin-top: 3rem; */
+}
+.Reset h1{
+    font-weight: 550;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    width: 18.2rem;
+}
+#reset {
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    padding: 0.5rem;
+    border: none;
+    background-color: navy;
+    color: #fff;
+    font-weight: 480;
+    font-size: 19px;
+}
+#reset:hover {
+    background-color: rgb(0, 0, 191);
+}
+#cancel {
+    border-radius: 4px;
+    border-radius: 4px;
+    padding: 0.5rem;
+    border: none;
+    color: rgb(129, 3, 3);
+    background-color: rgb(244, 179, 179);
+    font-weight: 480;
+    font-size: 19px;
+}
+#cancel:hover {
+    border-radius: 4px;
+    border-radius: 4px;
+    padding: 0.5rem;
+    border: none;
+    color: rgb(129, 3, 3);
+    background-color: rgb(249, 197, 197);
+    font-weight: 480;
+    font-size: 19px;
+}
+.labels-res {
+    font-weight: 450;
+    font-size: 20px;
+}
+
+.inputs-res{
+    height: 3rem;
+}
+
+#error {
+    color: red;
+    text-align: left;
+    margin-left: -7rem;
+}
+.reset-inform {
+    border-radius: 5px;
+    box-shadow: 2px 2px 35px 2px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    height: 60%;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgb(236, 233, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    margin-top: 22rem;
+    margin-left: 28rem;
+    z-index: 1;
+}
+
+.reset-inform h3{
+    margin-top: 7.2em;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buttons2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    font-size: 18px;
+}
+
+.resend {
+    border-radius: 4px;
+    background-color: rgb(17, 0, 126);
+    border: none;
+    color: #fff;
+    padding: 0.8rem;
+    font-weight: 550;
+}
+
+.resend:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(10, 0, 147);
+    box-shadow: 2px 2px 35px 2px rgba(0, 0, 0, 0.2)
+}
+
+.done {
+    border-radius: 4px;
+    background-color: rgb(17, 0, 126);
+    border: none;
+    color: #fff;
+    padding: 0.8rem;
+    font-weight: 550;
+}
+
+.done:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(10, 0, 147);
+    box-shadow: 2px 2px 35px 2px rgba(0, 0, 0, 0.2)
+}
+
+.reset-intro {
+    margin-top: 22rem;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: flex-start;
+    margin-left: 56em;
+}
+.reset-intro h1{
+    font-weight: 550;
+}

@@ -5,7 +5,7 @@ import SignImage from "../../assets/image/sign-in.png";
 import { Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Handlebutton from "../../components/LoginLogic/handlebutton";
-import { useLocation } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import queryString from "query-string";
 import Cookies from "js-cookie";
 
@@ -13,6 +13,12 @@ const PublicLogin = (submit) => {
   const isRegis = Cookies.get("isRegis");
   const location = useLocation();
   const queries = queryString.parse(location.search);
+  const navigate = useNavigate();
+  
+  const resetHandling = (e) => {
+      e.preventDefault();
+      navigate('/resetpassword')
+  }
 
   const { handleChange, handleSubmit, errors, values, submitted } =
     Handlebutton(submit, queries);
@@ -63,6 +69,8 @@ const PublicLogin = (submit) => {
               name="password"
             />
           </Form.Group>
+
+          <p id="forgot" onClick={resetHandling}>Forgot Password?</p>
           <div className="d-grid gap-2">
             {!submitted && (
               <Button

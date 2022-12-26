@@ -16,6 +16,8 @@ import Ticket from "./pages/Ticket";
 import LandingPage from "./pages/LandingPage";
 import PublicLogin from "./pages/PublicLogin";
 import PublicRegister from "./pages/PublicRegister";
+import Reset from "./pages/ResetPassword/reset";
+
 function App() {
   return (
     <div className="App">
@@ -35,6 +37,7 @@ function App() {
           <Route path="/login" element={<PublicLogin />} />
           <Route path="/register" element={<PublicRegister />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/resetpassword" element={<Reset />} />
         </Routes>
         <Footer />
       </BrowserRouter>

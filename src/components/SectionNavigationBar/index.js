@@ -112,7 +112,8 @@ const NavigationBar = () => {
                       className="navi-link"
                       hidden={
                         (locationNav.pathname === "/login" ||
-                          locationNav.pathname === "/register") &&
+                          locationNav.pathname === "/register" ||
+                          locationNav.pathname === "/resetpassword") &&
                         "true"
                       }
                     >

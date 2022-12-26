@@ -15,7 +15,8 @@ const Footer = () => {
       hidden={
         (locationFoot.pathname === "/login" ||
           locationFoot.pathname === "/register" ||
-          locationFoot.pathname === "/admin") &&
+          locationFoot.pathname === "/admin" ||
+          locationFoot.pathname === "/resetpassword") &&
         "true"
       }
     >
