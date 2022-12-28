@@ -48,6 +48,12 @@
     margin-top: -10%;
   
 }
+#eyecon2 {
+    color: navy;
+    margin-top: -2rem;
+    position: fixed;
+    margin-left: 33rem;
+}
 @keyframes fade-out {
     0% {
         opacity: 1;

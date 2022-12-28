@@ -1,14 +1,26 @@
-import React from "react";
+import React, {useState} from "react";
 import "./index.css";
 import SignImage from "../../assets/image/sign-in.png";
 import { Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Alert } from "react-bootstrap";
 import Handlebutton from "../../components/registerlogic/Handlebutton";
+import {BsEyeSlashFill,BsEyeFill} from 'react-icons/bs'
 
 const PublicRegister = (submitForm) => {
   const { handleChange, handleSubmit, errors, value, submitted } =
     Handlebutton(submitForm);
+
+    const [hidden, setHidden] = useState(false);
+    const [text, setText] = useState(false);
+
+    const eyeHandler = () => {
+      setHidden(hide => !hide);
+    }
+
+    const eyeHandler2 = () => {
+      setText(text => !text)
+    }
 
   return (
     <section className="sign-section">
@@ -44,12 +56,13 @@ const PublicRegister = (submitForm) => {
               <span style={{ color: "red" }}>&#42;{errors.password1}</span>
             )}
             <Form.Control
-              type="password"
+              type={text ? "text" : "password"}
               placeholder="6+ Password"
               name="password1"
               value={value.password1}
               onChange={handleChange}
             />
+            <span id="eyecon2" onClick={eyeHandler2}>{text ? <BsEyeSlashFill size={25}/> : <BsEyeFill size={25}/>}</span>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Confirm Password</Form.Label>{" "}
@@ -57,12 +70,13 @@ const PublicRegister = (submitForm) => {
               <span style={{ color: "red" }}>&#42;{errors.password2}</span>
             )}
             <Form.Control
-              type="password"
+              type={hidden ? "text" : "password"}
               placeholder="6+ Password"
               name="password2"
               value={value.password2}
               onChange={handleChange}
             />
+            <span id="eyecon2" onClick={eyeHandler}>{hidden ? <BsEyeSlashFill size={25}/> : <BsEyeFill size={25}/>}</span>
           </Form.Group>
           <div className="d-grid gap-2">
             <Button

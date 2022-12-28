@@ -5,7 +5,9 @@ export default function Validate(values) {
     errors.email = "This field is required";
   } else if (!/\S+@\S+\.\S+/.test(values.email)) {
     errors.email = "Email is invalid";
-  } else if (!values.password) {
+  }
+  
+  if (!values.password) {
     errors.password = "This field is required";
   } else if (values.password.length < 6) {
     errors.password = "Password must contain at least six characters";
@@ -13,7 +15,8 @@ export default function Validate(values) {
     /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-z]).{8,32}$/.test(values.password)
   ) {
     errors.password = "Password is invalid";
-  } else if (values.status) {
+  }
+   if (values.status) {
     errors.status = "Failed! Check email and password.";
   }
 

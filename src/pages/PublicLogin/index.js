@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./index.css";
 import { Alert } from "react-bootstrap";
 import SignImage from "../../assets/image/sign-in.png";
@@ -8,18 +8,23 @@ import Handlebutton from "../../components/LoginLogic/handlebutton";
 import { useLocation, useNavigate } from "react-router";
 import queryString from "query-string";
 import Cookies from "js-cookie";
+import {BsEyeSlashFill,BsEyeFill} from 'react-icons/bs'
 
 const PublicLogin = (submit) => {
   const isRegis = Cookies.get("isRegis");
   const location = useLocation();
   const queries = queryString.parse(location.search);
   const navigate = useNavigate();
+  const [show, setShow] = useState(false);
+
   
   const resetHandling = (e) => {
       e.preventDefault();
       navigate('/resetpassword')
   }
-
+  const showHandler = () => {
+    setShow(show => !show)
+  } 
   const { handleChange, handleSubmit, errors, values, submitted } =
     Handlebutton(submit, queries);
   return (
@@ -55,21 +60,21 @@ const PublicLogin = (submit) => {
               name="email"
             />
           </Form.Group>
-
+          
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>{" "}
             {errors.password && (
               <span style={{ color: "red" }}>&#42;{errors.password}</span>
             )}
             <Form.Control
-              type="password"
+              type={show ? "text" : "password"}
               placeholder="6+ Password"
               onChange={handleChange}
               value={values.password}
               name="password"
             />
+            <span id="eyecon" onClick={showHandler}>{show ? <BsEyeSlashFill size={25}/> : <BsEyeFill size={25}/>}</span>
           </Form.Group>
-
           <p id="forgot" onClick={resetHandling}>Forgot Password?</p>
           <div className="d-grid gap-2">
             {!submitted && (

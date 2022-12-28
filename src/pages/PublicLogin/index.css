@@ -67,7 +67,12 @@ img.sign-img {
 #forgot:hover {
   color: rgb(70, 98, 221);
 }
-
+#eyecon {
+  color: navy;
+  margin-top: -2rem;
+  position: fixed;
+  margin-left: 34rem;
+} 
 /* .Rentbtn,
 .Rentbtn:hover,
 .Rentbtn:active,
