@@ -30,6 +30,7 @@ export default class PreviousNextMethods extends Component {
       slidesToShow: 3,
       slidesToScroll: 3,
       initialSlide: 0,
+      autoplay: true,
       responsive: [
         {
           breakpoint: 1024,

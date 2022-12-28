@@ -55,6 +55,12 @@
   flex-direction: row;
 }
 
+#notif-icon {
+  margin-top: .5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 1024px) {
   .brand-logo{
     margin-left: 4.5rem;

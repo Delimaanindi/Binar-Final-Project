@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./index.css";
 import {
   Container,
@@ -12,6 +12,7 @@ import avatar from "../../assets/image/avatar.jpeg";
 // import { faDisplay } from "@fortawesome/free-solid-svg-icons";
 import Handlebutton from "../LoginLogic/handlebutton";
 import { Tooltip, styled } from "@mui/material";
+import {IoMdNotificationsOutline} from 'react-icons/io'
 
 const NavigationBar = () => {
   const locationNav = useLocation();
@@ -21,7 +22,11 @@ const NavigationBar = () => {
   let details = localStorage.getItem("userIn");
   let user = JSON.parse(details);
   
+  const [notif, setNotif] = useState(false);
 
+  const notification = () => {
+    setNotif(notif => !notif);
+  }
   const StyledTooltip = styled(({ className, ...props }) => (
     <Tooltip {...props} classes={{ popper: className }} />
   ))`
@@ -92,6 +97,8 @@ const NavigationBar = () => {
                 </Link>
                 {loggedin && user ? (
                   <div className="showuser">
+                    <IoMdNotificationsOutline size={25} id='notif-icon' onClick={notification}/>
+                    {notif ? (<div className="notif-card"></div>) : (<div></div>)}
                     <img src={avatar} alt="user avatar" id="userava" />
                     <NavDropdown
                       id="nav-dropdown-dark-example"

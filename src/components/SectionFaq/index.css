@@ -1,59 +1,69 @@
-.faq-section{
+.faq-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: auto;
-  padding: 1.5rem;
+  text-align: left;
+  margin: 6rem;
 }
-.faq-title{
+
+.faq-title p {
   width: auto;
+}
+
+.faq-list{
+  margin-left: 20%;
+  width: 40%;
+  margin-top: 1%;
+}
+.questions-active {
+  display: flex;
+  box-sizing: border-box;
+  border: 4px solid rgba(80, 138, 255, 0.5);
+  padding: 0.5rem;
+  border-radius: 4px;
+  justify-content: space-between;
+  font-size: 23px;
+}
+.questions {
+  display: flex;
+  box-sizing: border-box;
+  border: 2px solid rgba(64, 59, 59, 0.2) ;
+  border-radius: 0px;
+  padding: 0.5rem;
+  justify-content: space-between;
+  font-size: 23px;
+}
+.answers-active {
+  box-sizing: border-box;
+  border: 2px solid rgba(80, 138, 255, 0.5);
+  border-radius: 4px;
+  padding-top: 0.5rem;
+  padding-bottom: 0%;
+  padding-left: 0.5rem;
+  background-color: rgba(228, 228, 255, 0.5);
+}
+
+.answer-nonac {
+  display: none;
+}
+
+.activeq {
+  border: 1px solid rgba(150, 150, 234, 0.5);
+}
+
+@media screen and (max-width: 414px) {
+  .faq-section {
+      display: flex;
+      text-align: center;
+      margin: 1rem;
+      flex-direction: column;
+  }
+  .faq-title h1{
+      width: 100%;
+  }
+  .faq-list{
+      margin-left: 0%;
+      width: 100%;
+      margin-top: 1%;
+      text-align: left;
+  }
   
-  margin-bottom: 1rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.faq-title h1{
-  font-size: 30px;
-  font-weight:700;
-  line-height: 36px;
-}
-
-.faq-title p{
-  font-size: 14px;
-  font-weight:400;
-}
-
-.faq-content{
-
-}
-
-@media only screen and (min-width: 768px) {
-  .hero-section, .services-section, .faq-section{
-    flex-direction: row;
-  }
-  .faq-section{
-    align-items: flex-start;
-    padding: 1.5rem;
-  }
-
-  .faq-title{
-    text-align: left;
-  }
-  .faq-content{
-    width: 50%;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-.faq-section{
-    margin: 0;
-    padding: 5rem;
-  }
-
-  .faq-content{
-    width: 55%;
-  }
 }
