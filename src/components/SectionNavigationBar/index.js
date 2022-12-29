@@ -15,6 +15,7 @@ import { Tooltip, styled } from "@mui/material";
 import {IoMdNotificationsOutline} from 'react-icons/io'
 import Notification from "../Notification/notification";
 import {Badge} from 'react-bootstrap'
+import { data } from "../Notification/notification";
 
 const NavigationBar = () => {
   const locationNav = useLocation();
@@ -105,7 +106,7 @@ const NavigationBar = () => {
                     id={active? "notif-icon2" : "notif-icon"} onClick={notification}/>
                     {notif ? (<div className="notif-card">
                     <Notification />
-                    </div>) : (<span id="notif-badge"><Badge pill bg="primary">3</Badge>{''}</span>)}
+                    </div>) : (<span id="notif-badge"><Badge pill bg="primary">{data.length}</Badge>{''}</span>)}
                     <img src={avatar} alt="user avatar" id="userava" />
                     <NavDropdown
                       id="nav-dropdown-dark-example"

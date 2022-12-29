@@ -3,7 +3,7 @@ import Notifcard from "./notifcard"
 import React from "react"
 import './notification.css'
 
-const data = [
+export const data = [
     {id:1,
      date: "12/12/2022",
      timestamp: "09.00",
@@ -21,7 +21,9 @@ const data = [
      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quae?"}
 ]
 
+
 export default function Notification() {
+    
     return(
         <>
         <div className="card-con">
@@ -36,4 +38,5 @@ export default function Notification() {
             </div>
         </>
     )
+   
 }
