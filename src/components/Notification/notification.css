@@ -9,6 +9,7 @@
 }
 .cards {
     padding: 1rem;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1) ;
 }
 
 .cards:hover {
@@ -24,4 +25,6 @@
 
 #title {
     font-weight: 550;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 17px;
 }

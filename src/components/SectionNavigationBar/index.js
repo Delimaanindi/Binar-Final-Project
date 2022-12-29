@@ -14,6 +14,7 @@ import Handlebutton from "../LoginLogic/handlebutton";
 import { Tooltip, styled } from "@mui/material";
 import {IoMdNotificationsOutline} from 'react-icons/io'
 import Notification from "../Notification/notification";
+import {Badge} from 'react-bootstrap'
 
 const NavigationBar = () => {
   const locationNav = useLocation();
@@ -104,7 +105,7 @@ const NavigationBar = () => {
                     id={active? "notif-icon2" : "notif-icon"} onClick={notification}/>
                     {notif ? (<div className="notif-card">
                     <Notification />
-                    </div>) : (<div></div>)}
+                    </div>) : (<span id="notif-badge"><Badge pill bg="primary">3</Badge>{''}</span>)}
                     <img src={avatar} alt="user avatar" id="userava" />
                     <NavDropdown
                       id="nav-dropdown-dark-example"

@@ -219,8 +219,8 @@ const PaymentCar = () => {
                       className="btn-bank"
                       onClick={(e) => handleClickBank(e, "BCA")}
                     >
-                      <div className="tmbl">BCA</div>
-                      <div className="tmbl-text">BCA Transfer</div>
+                      <div className={isCheck1 ? 'tmblselected' : "tmbl"}>BCA</div>
+                      <div className={isCheck1 ? 'textselected' : "tmbl-text"}>BCA Transfer</div>
                       {isCheck1 && (
                         <FontAwesomeIcon icon={faCheck} className="ico" />
                       )}
@@ -229,8 +229,8 @@ const PaymentCar = () => {
                       className="btn-bank"
                       onClick={(e) => handleClickBank(e, "BNI")}
                     >
-                      <div className="tmbl">BNI</div>
-                      <div className="tmbl-text">BNI Transfer</div>
+                      <div className={isCheck2 ? 'tmblselected' : "tmbl"}>BNI</div>
+                      <div className={isCheck2 ? 'textselected' : "tmbl-text"}>BNI Transfer</div>
                       {isCheck2 && (
                         <FontAwesomeIcon icon={faCheck} className="ico" />
                       )}
@@ -239,8 +239,8 @@ const PaymentCar = () => {
                       className="btn-bank"
                       onClick={(e) => handleClickBank(e, "Mandiri")}
                     >
-                      <div className="tmbl">Mandiri</div>
-                      <div className="tmbl-text">Mandiri Transfer</div>
+                      <div className={isCheck3 ? 'tmblselected' : "tmbl"}>Mandiri</div>
+                      <div className={isCheck3 ? 'textselected' : "tmbl-text"}>Mandiri Transfer</div>
                       {isCheck3 && (
                         <FontAwesomeIcon icon={faCheck} className="ico" />
                       )}

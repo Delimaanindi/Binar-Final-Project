@@ -57,7 +57,7 @@
 
 #notif-icon {
   margin-top: .5rem;
-  margin-right: 1rem;
+  margin-right: -0.5rem;
   cursor: pointer;
 }
 
@@ -65,7 +65,12 @@
   margin-top: .5rem;
   margin-right: 1rem;
   cursor: pointer;
-  color: red;
+  color: rgb(108, 108, 232);
+}
+
+#notif-badge {
+  margin-right: 1rem;
+  font-size: 14px;
 }
 
 @media only screen and (min-width: 1024px) {

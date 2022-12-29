@@ -12,7 +12,7 @@ const data = [
     {id:2,
      date: "13/12/2022",
      timestamp: "11.00",
-     title: "Here is our best drivers!",
+     title: "Here are our best drivers!",
      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quae?"},
     {id:3,
      date: "14/12/2022",

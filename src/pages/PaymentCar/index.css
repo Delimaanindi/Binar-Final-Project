@@ -67,13 +67,30 @@
     border: solid 2px lightgray;
     border-radius: 5px;
     margin-right:1rem;
+    cursor: pointer;
 }
-
+.tmblselected {
+    background-color: #d7f3d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem 0;
+    width: 100px;
+    border: solid 4px rgb(159, 224, 170);
+    border-radius: 5px;
+    margin-right:1rem;
+    cursor: pointer;
+}
 .tmbl-text{
     display: flex;
     margin-top: 0.5rem;
 }
-
+.textselected {
+    display: flex;
+    margin-top: 0.8rem;
+    color: #42a546;
+    font-weight: 550;
+}
 .ico{
     color: #5CB85F;
     font-size: 30px;
