@@ -61,6 +61,13 @@
   cursor: pointer;
 }
 
+#notif-icon2 {
+  margin-top: .5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  color: red;
+}
+
 @media only screen and (min-width: 1024px) {
   .brand-logo{
     margin-left: 4.5rem;

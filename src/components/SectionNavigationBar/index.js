@@ -13,6 +13,7 @@ import avatar from "../../assets/image/avatar.jpeg";
 import Handlebutton from "../LoginLogic/handlebutton";
 import { Tooltip, styled } from "@mui/material";
 import {IoMdNotificationsOutline} from 'react-icons/io'
+import Notification from "../Notification/notification";
 
 const NavigationBar = () => {
   const locationNav = useLocation();
@@ -23,9 +24,11 @@ const NavigationBar = () => {
   let user = JSON.parse(details);
   
   const [notif, setNotif] = useState(false);
+  const [active, setActive] = useState(false);
 
   const notification = () => {
     setNotif(notif => !notif);
+    setActive(active => !active)
   }
   const StyledTooltip = styled(({ className, ...props }) => (
     <Tooltip {...props} classes={{ popper: className }} />
@@ -97,8 +100,11 @@ const NavigationBar = () => {
                 </Link>
                 {loggedin && user ? (
                   <div className="showuser">
-                    <IoMdNotificationsOutline size={25} id='notif-icon' onClick={notification}/>
-                    {notif ? (<div className="notif-card"></div>) : (<div></div>)}
+                    <IoMdNotificationsOutline size={25} 
+                    id={active? "notif-icon2" : "notif-icon"} onClick={notification}/>
+                    {notif ? (<div className="notif-card">
+                    <Notification />
+                    </div>) : (<div></div>)}
                     <img src={avatar} alt="user avatar" id="userava" />
                     <NavDropdown
                       id="nav-dropdown-dark-example"
