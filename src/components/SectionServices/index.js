@@ -1,10 +1,17 @@
 import React from 'react'
 import ServiceImage from "../../assets/image/img_service.png";
 import "./index.css";
+import Gift from '../../assets/image/gift.webp'
 
 const Services = () => {
   return (
     <div>
+      <div className='gift'>
+      <img src={Gift}
+          id='gift-img'
+          alt='voucher gift'/>
+          <button id='gift-button'>Check Out the Gift Now!</button>
+      </div>
       <section id="services" className="services-section">
         <div className="services-flex services-image">
           <img
