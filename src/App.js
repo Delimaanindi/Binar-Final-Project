@@ -17,6 +17,7 @@ import LandingPage from "./pages/LandingPage";
 import PublicLogin from "./pages/PublicLogin";
 import PublicRegister from "./pages/PublicRegister";
 import Reset from "./pages/ResetPassword/reset";
+import Gift from "./pages/Gift/Gift";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/register" element={<PublicRegister />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/resetpassword" element={<Reset />} />
+          <Route path="/gift" element={<Gift />} />
         </Routes>
         <Footer />
       </BrowserRouter>

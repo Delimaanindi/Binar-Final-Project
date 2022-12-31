@@ -1,0 +1,76 @@
+.card-contain {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    border: dashed 4px rgb(255, 255, 255);
+    width: 58%;
+    justify-content: space-between;
+}
+.fortext {
+    width: 40%;
+    background-color: rgb(0, 2, 130);
+}
+#text {
+    text-align: center;  
+    color: #fff;  
+    padding: 0.3rem;
+    padding-top: 1.5rem;
+}
+#titles {
+    font-weight: 530;
+}
+#discount {
+    font-weight: 550;
+    font-size: 40px;
+}
+.v-card {
+    width: 100%;
+    background-color: rgb(230, 230, 255);
+    padding: 0.5rem;
+    margin-left: 0;
+}
+#claim-btn {
+    width: 10%;
+    border: none;
+    background-color: rgb(31, 1, 141);
+    color: #fff;
+    font-weight: 550;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-top: -1rem;
+    box-shadow: 2px 2px 10px 2px #fff;
+}
+
+#claim-btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(7, 0, 134);
+    border: solid 3px #000;
+}
+.gift-comp {
+    display: flex;
+    background-image: url('../../assets/image/new2.webp');
+    background-repeat: no-repeat;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Brand h6 {
+    font-weight: 700;
+    font-size: 35px;
+    margin-top: 5rem;
+    margin-right: 3rem;
+    color: #fff;
+}
+
+.Brand h4 {
+    color: #fff;
+}
+
+#claimed {
+    position: inherit;
+    font-size: 25px;
+    font-weight: 600;
+    padding-left: 6rem;
+    padding-top: .8rem;
+    color: rgb(27, 214, 2);
+}
